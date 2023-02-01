@@ -1,0 +1,55 @@
+<!-- responsavel por criar a pagina de formulario onde teremos os campos para realizar perguntas com titulo da pergunta e descrição da pergunta  -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>guia perguntas</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="navbar navbar-light bg-primary">
+      <a class="navbar-brand" href="/">
+        <img src="img/guia.png" width="100px" />
+      </a>
+    </div>
+    <div class="container">
+      <div class="card-header" id="formulario-pergunta">
+        <h1>Realizar pergunta</h1>
+      </div>
+      <div class="card-body">
+        <!-- dados serão mandados para a requisição POST com o endereço /SALVARPERGUNTA-->
+        <form method="post" action="/salvarpergunta">
+          <label>título</label>
+          <input
+            type="text"
+            placeholder="título"
+            class="form-control"
+            name="titulo"
+          /><br />
+          <label>Descrição</label>
+          <textarea
+            placeholder="descreva sua pergunta aqui"
+            class="form-control"
+            name="descricao"
+          ></textarea
+          ><br />
+          <button class="btn btn-primary">Perguntar</button>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"
+  ></script>
+  <script src="/js/bootstrap.min.js"></script>
+</html>

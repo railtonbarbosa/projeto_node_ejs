@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>guia perguntas</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <b>guia de perguntas:</b>
+    <hr />
+    <h3>lista de perguntas!</h3>
+    <!-- essa tag <%=  %> serve para exibir valor de uma variavel no nosso html  criada no nosso back ou em outra pag  -->
+    <p><b>meu nome:</b><%= nome %></p>
+    <p><b>linguagem favorita:</b><%= lang %></p>
+    <p><b>nome da empresa:</b><%= enpresa %></p>
+    <p><b>total de inscritos:</b><%= inscritos %></p>
+    <!-- usando if else  -->
+    <% if (msg == true) {%>
+    <h2>isso é uma mensagen de erro</h2>
+    <%} else {%>
+    <h2>nenhum erro encontrado</h2>
+    <%}%>
+    <!-- adicionando arrays no nosso html -->
+    <% produtos.forEach(function(produto) {%>
+    <hr />
+    <h3><%= produto.nome %></h3>
+    <h4><%= produto.preco %></h4>
+
+    <% }) %>
+
+    <img src="/img/sandero.jpeg" width="200px" />
+  </body>
+</html>
